@@ -22,9 +22,10 @@ int main(){
         cin >> basis;
         cout << "Enter a value for the expoent: ";
         cin >> expoent;
-        cout << basis << "^" << expoent << " = " << calculate_power(basis, expoent) << endl;
-        cout << "Do you want to calculate the power of another number? (Y/N)" << endl;
-        cin >> ans;
+        if(expoent > 0){
+            cout << basis << "^" << expoent << " = " << calculate_power(basis, expoent) << endl;
+            cout << "Do you want to calculate the power of another number? (Y/N)" << endl;
+            cin >> ans;
     } while(ans == 'y' || ans == 'Y');
 
     return 0;

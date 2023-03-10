@@ -13,9 +13,16 @@ int main(){
     int n;
 
     cout << "====== FACTORIAL CALCULATOR ======" << endl;
-    cout << "Type the number you want to calculate the factorial of: ";
-    cin >> n;
-    cout << n << "! = " << calculate_factorial(n);
+    while (true){
+        cout << "Type the number you want to calculate the factorial of: ";
+        cin >> n;
+        if(n > 0){
+            break;
+        }else{
+            cout << "The number must be positive!" << endl;
+        }
+    }
+    cout << n << "! = " << calculate_factorial(n) << endl;
     return 0;
 }
 
